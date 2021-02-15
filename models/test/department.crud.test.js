@@ -120,8 +120,8 @@ describe('Department', () => {
 
     it('should properly remove one document with "deleteOne" method', async () => {
       await Department.deleteOne({ name: 'Department #1' });
-      const removeDepartment = await Department.findOne({ name: 'Department #1' });
-      expect(removeDepartment).to.be.null;
+      const removedDepartment = await Department.findOne({ name: 'Department #1' });
+      expect(removedDepartment).to.be.null;
     });
 
     it('should properly remove one document with "remove" method', async () => {
